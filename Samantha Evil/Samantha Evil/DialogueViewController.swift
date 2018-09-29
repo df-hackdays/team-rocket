@@ -16,7 +16,7 @@ class DialogueViewController: UIViewController, UITableViewDataSource, UITableVi
     private var shownDialogueArray: [Dialogue] = []
     
     enum ChatType {
-        case message, button
+        case message, button, notification
     }
     
     enum ButtonType {
