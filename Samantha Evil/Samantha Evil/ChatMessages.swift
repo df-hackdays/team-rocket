@@ -20,26 +20,26 @@ class ChatMessages: NSObject {
                                                 buttonB: nil,
                                                 delay: 0.0,
                                                 type: .message),
-                DialogueViewController.Dialogue(dialogue: "Apprantly, TransUnion - one of the largest credit bureau in Canada",
+                DialogueViewController.Dialogue(dialogue: "Apprantly, Equifax - one of the largest credit bureau in Canada",
                                                 buttonA: nil,
                                                 buttonB: nil,
                                                 delay: 2.0,
                                                 type: .message),
-                DialogueViewController.Dialogue(dialogue: "it's database has been hacked",
+                DialogueViewController.Dialogue(dialogue: "their database has been hacked",
                                                 buttonA: nil,
                                                 buttonB: nil,
                                                 delay: 2.0,
                                                 type: .message),
-                DialogueViewController.Dialogue(dialogue: "All Canadians' credit information are now in the wild",
+                DialogueViewController.Dialogue(dialogue: "All Canadians' credit information are now at risk",
                                                 buttonA: nil,
                                                 buttonB: nil,
                                                 delay: 2.0,
                                                 type: .message),
                 DialogueViewController.Dialogue(dialogue: "http://www.youtube.com",
-                                                buttonA: DialogueViewController.Button(buttonLabel: "See what happened?",
+                                                buttonA: DialogueViewController.Button(buttonLabel: "Why it's a big risk?",
                                                                                        buttonAction: 0,
-                                                                                       type: .openUrl),
-                                                buttonB: DialogueViewController.Button(buttonLabel: "Ok, I am done watching",
+                                                                                       type: .video),
+                                                buttonB: DialogueViewController.Button(buttonLabel: "Ok, carry on",
                                                                                        buttonAction: 2,
                                                                                        type: .nextMessages),
                                                 delay: 2.0,
@@ -47,12 +47,12 @@ class ChatMessages: NSObject {
             ]
         case 2:
             messageArray = [
-                DialogueViewController.Dialogue(dialogue: "Samantha Eeevil is a cyber criminal who hacked TransUnion's database",
+                DialogueViewController.Dialogue(dialogue: "Samantha Evil is a cyber criminal who hacked Equifax's database",
                                                 buttonA: nil,
                                                 buttonB: nil,
                                                 delay: 0.0,
                                                 type: .message),
-                DialogueViewController.Dialogue(dialogue: "She is using people's personal information to rob bank accounts",
+                DialogueViewController.Dialogue(dialogue: "She is using people's personal information and stealing from their bank accounts",
                                                 buttonA: nil,
                                                 buttonB: nil,
                                                 delay: 2.0,
@@ -84,22 +84,74 @@ class ChatMessages: NSObject {
             ]
         case 3:
             messageArray = [
-                DialogueViewController.Dialogue(dialogue: "Let's find Samantha using the Internet! Its fast!",
+                DialogueViewController.Dialogue(dialogue: "That's good to hear",
                                                 buttonA: nil,
                                                 buttonB: nil,
                                                 delay: 0.0,
                                                 type: .message),
-                DialogueViewController.Dialogue(dialogue: "http://www.instagram.com",
+                DialogueViewController.Dialogue(dialogue: "The case is currently under investigation by Inspector Gabby",
+                                                buttonA: nil,
+                                                buttonB: nil,
+                                                delay: 2.0,
+                                                type: .message),
+                DialogueViewController.Dialogue(dialogue: "Inspector Gabby just joined not long ago, good, hardworking, but still fresh",
+                                                buttonA: nil,
+                                                buttonB: nil,
+                                                delay: 2.0,
+                                                type: .message),
+                DialogueViewController.Dialogue(dialogue: "I will ask Gabby to contact you directly, good luck detective!",
+                                                buttonA: nil,
+                                                buttonB: nil,
+                                                delay: 2.0,
+                                                type: .message),
+                DialogueViewController.Dialogue(dialogue: "[Transmission ended...]",
+                                                buttonA: DialogueViewController.Button(buttonLabel: "messagePack",
+                                                                                       buttonAction: 5,
+                                                                                       type: .nextMessages),
+                                                buttonB: DialogueViewController.Button(buttonLabel: "NotificationTimer",
+                                                                                       buttonAction: 10,
+                                                                                       type: .nextMessages),
+                                                delay: 2.0,
+                                                type: .notification),
+            ]
+        case 4:
+            messageArray = [
+                DialogueViewController.Dialogue(dialogue: "Hello Detective!",
+                                                buttonA: nil,
+                                                buttonB: nil,
+                                                delay: 0.0,
+                                                type: .message),
+                DialogueViewController.Dialogue(dialogue: "This is Inspector Gabby, I have been looking forward to work with you!",
+                                                buttonA: nil,
+                                                buttonB: nil,
+                                                delay: 2.0,
+                                                type: .message),
+                DialogueViewController.Dialogue(dialogue: "You were a legend here in RCMP, even though you have left the organization 5 years ago.",
+                                                buttonA: nil,
+                                                buttonB: nil,
+                                                delay: 2.0,
+                                                type: .message),
+                DialogueViewController.Dialogue(dialogue: "I can't imagine why you left the organization, hopefully you will tell me one day.",
+                                                buttonA: nil,
+                                                buttonB: nil,
+                                                delay: 2.0,
+                                                type: .message),
+                DialogueViewController.Dialogue(dialogue: "Anyways, I have tracked down Samantha on her instagram account, please take a look.",
+                                                buttonA: nil,
+                                                buttonB: nil,
+                                                delay: 2.0,
+                                                type: .message),
+                DialogueViewController.Dialogue(dialogue: "http://www.instagram.com/samanthaevil",
                                                 buttonA: DialogueViewController.Button(buttonLabel: "Open Instagram",
                                                                                        buttonAction: 0,
                                                                                        type: .openUrl),
-                                                buttonB: DialogueViewController.Button(buttonLabel: "Continue",
-                                                                                       buttonAction: 4,
+                                                buttonB: DialogueViewController.Button(buttonLabel: "What's this?",
+                                                                                       buttonAction: 5,
                                                                                        type: .nextMessages),
                                                 delay: 2.0,
                                                 type: .button)
             ]
-        case 4:
+        case 5:
             messageArray = [
                 DialogueViewController.Dialogue(dialogue: "What's this? It is a social media platofrm that is called Instagram",
                                                 buttonA: nil,
@@ -111,7 +163,7 @@ class ChatMessages: NSObject {
                                                 buttonB: nil,
                                                 delay: 2.0,
                                                 type: .message),
-                DialogueViewController.Dialogue(dialogue: "We might be able to find hints on where she's at by going through her Instagram",
+                DialogueViewController.Dialogue(dialogue: "We might be able to find clues on where she's at by going through her Instagram",
                                                 buttonA: nil,
                                                 buttonB: nil,
                                                 delay: 2.0,
@@ -121,19 +173,19 @@ class ChatMessages: NSObject {
                                                                                        buttonAction: 0,
                                                                                        type: .openUrl),
                                                 buttonB: DialogueViewController.Button(buttonLabel: "Continue",
-                                                                                       buttonAction: 5,
+                                                                                       buttonAction: 6,
                                                                                        type: .nextMessages),
                                                 delay: 2.0,
                                                 type: .button)
             ]
-        case 5:
+        case 6:
             messageArray = [
                 DialogueViewController.Dialogue(dialogue: "Looks like Samantha has a good taste of wine",
                                                 buttonA: nil,
                                                 buttonB: nil,
                                                 delay: 0.0,
                                                 type: .message),
-                DialogueViewController.Dialogue(dialogue: "We might be able to track her down by looking where she will buy the wine",
+                DialogueViewController.Dialogue(dialogue: "We might be able to track her down by looking at which wine she drinks and where is the place we can get the wine!",
                                                 buttonA: nil,
                                                 buttonB: nil,
                                                 delay: 2.0,
@@ -143,12 +195,12 @@ class ChatMessages: NSObject {
                                                                                        buttonAction: 0,
                                                                                        type: .openUrl),
                                                 buttonB: DialogueViewController.Button(buttonLabel: "Reply with answer",
-                                                                                       buttonAction: 6,
+                                                                                       buttonAction: 7,
                                                                                        type: .nextMessages),
                                                 delay: 2.0,
                                                 type: .button)
             ]
-        case 6:
+        case 7:
             messageArray = [
                 DialogueViewController.Dialogue(dialogue: "So which wine did Samantha have and how many people liked it?",
                                                 buttonA: nil,
@@ -157,7 +209,7 @@ class ChatMessages: NSObject {
                                                 type: .message),
                 DialogueViewController.Dialogue(dialogue: "http://www.instagram.com",
                                                 buttonA: DialogueViewController.Button(buttonLabel: "#Summerwine, 1 Like",
-                                                                                       buttonAction: 7,
+                                                                                       buttonAction: 8,
                                                                                        type: .nextMessages),
                                                 buttonB: DialogueViewController.Button(buttonLabel: "#Merlon, 2 Likes",
                                                                                        buttonAction: 999,
@@ -165,7 +217,7 @@ class ChatMessages: NSObject {
                                                 delay: 2.0,
                                                 type: .button)
             ]
-        case 7:
+        case 8:
             messageArray = [
                 DialogueViewController.Dialogue(dialogue: "Great job!",
                                                 buttonA: nil,
@@ -192,16 +244,16 @@ class ChatMessages: NSObject {
                                                                                        buttonAction: 0,
                                                                                        type: .openUrl),
                                                 buttonB: DialogueViewController.Button(buttonLabel: "Reply with answer",
-                                                                                       buttonAction: 8,
+                                                                                       buttonAction: 9,
                                                                                        type: .nextMessages),
                                                 delay: 2.0,
                                                 type: .button)
             ]
-        case 8:
+        case 9:
             messageArray = [
                 DialogueViewController.Dialogue(dialogue: "http://www.facebook.com/samantha.eevil.399",
                                                 buttonA: DialogueViewController.Button(buttonLabel: "Avengers Infinity War, Cineplex",
-                                                                                       buttonAction: 9,
+                                                                                       buttonAction: 10,
                                                                                        type: .nextMessages),
                                                 buttonB: DialogueViewController.Button(buttonLabel: "Swordfish, Tower Theater",
                                                                                        buttonAction: 999,
@@ -209,7 +261,7 @@ class ChatMessages: NSObject {
                                                 delay: 0.0,
                                                 type: .button)
             ]
-        case 9:
+        case 10:
             messageArray = [
                 DialogueViewController.Dialogue(dialogue: "Great job!",
                                                 buttonA: nil,
@@ -221,24 +273,36 @@ class ChatMessages: NSObject {
                                                 buttonB: nil,
                                                 delay: 2.0,
                                                 type: .message),
-                DialogueViewController.Dialogue(dialogue: "How many people liked the page? (Hint: `Like` is not the same as `Follow`",
+                DialogueViewController.Dialogue(dialogue: "http://www.facebook.com/samantha.eevil.399",
+                                                buttonA: DialogueViewController.Button(buttonLabel: "Open Samantha's facebook",
+                                                                                       buttonAction: 11,
+                                                                                       type: .openUrl),
+                                                buttonB: DialogueViewController.Button(buttonLabel: "Give Gabby the answer",
+                                                                                       buttonAction: 11,
+                                                                                       type: .nextMessages),
+                                                delay: 2.0,
+                                                type: .button)
+            ]
+        case 11:
+            messageArray = [
+                DialogueViewController.Dialogue(dialogue: "What's the rating of that movie",
                                                 buttonA: nil,
                                                 buttonB: nil,
-                                                delay: 2.0,
+                                                delay: 0.0,
                                                 type: .message),
-                DialogueViewController.Dialogue(dialogue: "http://www.facebook.com",
-                                                buttonA: DialogueViewController.Button(buttonLabel: "16,823",
-                                                                                       buttonAction: 10,
+                DialogueViewController.Dialogue(dialogue: "http://www.facebook.com/samantha.eevil.399",
+                                                buttonA: DialogueViewController.Button(buttonLabel: "approx. 4.4 out of 5",
+                                                                                       buttonAction: 12,
                                                                                        type: .nextMessages),
-                                                buttonB: DialogueViewController.Button(buttonLabel: "17,052",
+                                                buttonB: DialogueViewController.Button(buttonLabel: "approx. 1 out of 5",
                                                                                        buttonAction: 999,
                                                                                        type: .nextMessages),
                                                 delay: 2.0,
                                                 type: .button)
             ]
-        case 10:
+        case 12:
             messageArray = [
-                DialogueViewController.Dialogue(dialogue: "Excellent!",
+                DialogueViewController.Dialogue(dialogue: "Excellent! I haven't see that movie yet.",
                                                 buttonA: nil,
                                                 buttonB: nil,
                                                 delay: 0.0,
@@ -248,19 +312,53 @@ class ChatMessages: NSObject {
                                                 buttonB: nil,
                                                 delay: 2.0,
                                                 type: .message),
-                DialogueViewController.Dialogue(dialogue: "http://www.facebook.com",
+                DialogueViewController.Dialogue(dialogue: "http://www.facebook.com/samantha.eevil.399",
                                                 buttonA: DialogueViewController.Button(buttonLabel: "Samuel Chung",
-                                                                                       buttonAction: 999,
+                                                                                       buttonAction: 13,
                                                                                        type: .nextMessages),
                                                 buttonB: DialogueViewController.Button(buttonLabel: "Ashley Cruz",
-                                                                                       buttonAction: 999,
+                                                                                       buttonAction: 13,
                                                                                        type: .nextMessages),
                                                 delay: 2.0,
                                                 type: .button)
             ]
+        case 13:
+            messageArray = [
+                DialogueViewController.Dialogue(dialogue: "Ok, in this case, when I go arrest her, I am expecting two suspects on the scene!",
+                                                buttonA: nil,
+                                                buttonB: nil,
+                                                delay: 0.0,
+                                                type: .message),
+                DialogueViewController.Dialogue(dialogue: "Are you able to dig further on facebook and tell me their most recent location?",
+                                                buttonA: nil,
+                                                buttonB: nil,
+                                                delay: 2.0,
+                                                type: .message),
+                DialogueViewController.Dialogue(dialogue: "http://www.facebook.com/samantha.eevil.399",
+                                                buttonA: DialogueViewController.Button(buttonLabel: "Open Samantha's Facebook",
+                                                                                       buttonAction: 14,
+                                                                                       type: .openUrl),
+                                                buttonB: DialogueViewController.Button(buttonLabel: "Tell Gabby the address",
+                                                                                       buttonAction: 14,
+                                                                                       type: .nextMessages),
+                                                delay: 2.0,
+                                                type: .button)
+            ]
+        case 14:
+            messageArray = [
+                DialogueViewController.Dialogue(dialogue: "http://www.facebook.com/samantha.eevil.399",
+                                                buttonA: DialogueViewController.Button(buttonLabel: "Scotiabank Digital Factory",
+                                                                                       buttonAction: 999,
+                                                                                       type: .nextMessages),
+                                                buttonB: DialogueViewController.Button(buttonLabel: "ScotiaBank Theater",
+                                                                                       buttonAction: 999,
+                                                                                       type: .nextMessages),
+                                                delay: 0.0,
+                                                type: .button)
+            ]
         case 999:
             messageArray = [
-                DialogueViewController.Dialogue(dialogue: "I am disappointed",
+                DialogueViewController.Dialogue(dialogue: "I am disappointed...",
                                                 buttonA: nil,
                                                 buttonB: nil,
                                                 delay: 0.0,
@@ -293,7 +391,7 @@ class ChatMessages: NSObject {
                                                 buttonB: nil,
                                                 delay: 2.0,
                                                 type: .message),
-                DialogueViewController.Dialogue(dialogue: "We have a problem... All Canadian SIN numbers are at risk!",
+                DialogueViewController.Dialogue(dialogue: "We have a problem... All Canadians credit information are at risk!",
                                                 buttonA: nil,
                                                 buttonB: nil,
                                                 delay: 2.0,

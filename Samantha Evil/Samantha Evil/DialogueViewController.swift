@@ -7,6 +7,11 @@
 //
 
 import UIKit
+import UserNotifications
+import AVKit
+import AVFoundation
+
+public let kNotification = Notification.Name("resumeMessages")
 
 class DialogueViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
@@ -20,7 +25,7 @@ class DialogueViewController: UIViewController, UITableViewDataSource, UITableVi
     }
     
     enum ButtonType {
-        case nextMessages, openUrl
+        case nextMessages, openUrl, video
     }
     
     struct Dialogue {
@@ -39,6 +44,7 @@ class DialogueViewController: UIViewController, UITableViewDataSource, UITableVi
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        NotificationCenter.default.addObserver(self, selector: #selector(reactToNotification(_:)), name: kNotification, object: nil)
         dialogueArray += ChatMessages.getMessagePack(pack: 0)
         showDialogue()
     }
@@ -79,6 +85,17 @@ class DialogueViewController: UIViewController, UITableViewDataSource, UITableVi
                 cell?.alpha = 1.0
             }, completion: nil)
             return cell!
+        case .notification:
+            let cell = tableView.dequeueReusableCell(withIdentifier: "messageCell", for: indexPath) as? MessageTableViewCell
+            cell?.dialogueLabel.text = dialogue.dialogue
+            cell?.alpha = 0.0
+            sendDelayNotification(timeInSec: Double(dialogue.buttonB?.buttonAction ?? 5))
+            UIView.animate(withDuration: 0.5, delay: 0.0, options: .curveEaseIn, animations: {
+                cell?.alpha = 1.0
+            }) { (completed) in
+            }
+            
+            return cell!
         default:
             let cell = tableView.dequeueReusableCell(withIdentifier: "buttonCell", for: indexPath) as? ButtonTableViewCell
             
@@ -117,10 +134,19 @@ class DialogueViewController: UIViewController, UITableViewDataSource, UITableVi
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         let dialogue = shownDialogueArray[indexPath.row]
         switch dialogue.type {
-        case .message:
-            return 120
-        default:
+        case .button:
             return 240
+        default:
+            return 120
+        }
+    }
+    
+    func playVideo(videoNumber: Int) {
+        let player = AVPlayer(url: URL(fileURLWithPath: Bundle.main.path(forResource: "test", ofType:"mp4")!))
+        let vc = AVPlayerViewController()
+        vc.player = player
+        present(vc, animated: true) {
+            vc.player?.play()
         }
     }
     
@@ -134,6 +160,8 @@ class DialogueViewController: UIViewController, UITableViewDataSource, UITableVi
                     //go to url
                 }
             }
+        case .video?:
+            playVideo(videoNumber: sender.videoNumber ?? 0)
 
         default:
             dialogueArray = ChatMessages.getMessagePack(pack: sender.messagePack!)
@@ -141,6 +169,22 @@ class DialogueViewController: UIViewController, UITableViewDataSource, UITableVi
             sender.cell?.buttonA.isEnabled = false
             sender.cell?.buttonB.isEnabled = false
         }
+    }
+    
+    @objc func reactToNotification(_ sender: Notification) {
+        dialogueArray = ChatMessages.getMessagePack(pack: 4)
+        showDialogue()
+    }
+    
+    func sendDelayNotification(timeInSec: Double) {
+        let content = UNMutableNotificationContent()
+        content.title = "You got a new message"
+        content.sound = UNNotificationSound.default()
+        
+        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: timeInSec, repeats: false)
+        
+        let request = UNNotificationRequest(identifier: "delayNotification", content: content, trigger: trigger)
+        UNUserNotificationCenter.current().add(request, withCompletionHandler: nil)
     }
 }
 
@@ -160,6 +204,7 @@ class ChoiceButton: UIButton {
     var cell: ButtonTableViewCell?
     var buttonKind: DialogueViewController.ButtonType?
     var url: String?
+    var videoNumber: Int?
 }
 
 
