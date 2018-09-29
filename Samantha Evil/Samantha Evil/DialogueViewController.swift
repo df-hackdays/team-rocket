@@ -89,12 +89,14 @@ class DialogueViewController: UIViewController, UITableViewDataSource, UITableVi
             cell?.buttonA.addTarget(self, action: #selector(buttonAction(_:)), for: .touchUpInside)
             cell?.buttonA.buttonKind = dialogue.buttonA?.type
             cell?.buttonA.cell = cell
+            cell?.buttonA.url = dialogue.dialogue
             
             cell?.buttonB.setTitle(dialogue.buttonB?.buttonLabel, for: .normal)
             cell?.buttonB.messagePack = dialogue.buttonB?.buttonAction
             cell?.buttonB.addTarget(self, action: #selector(buttonAction(_:)), for: .touchUpInside)
             cell?.buttonB.buttonKind = dialogue.buttonB?.type
             cell?.buttonB.cell = cell
+            cell?.buttonB.url = dialogue.dialogue
             
             if indexPath.row == shownDialogueArray.count - 1 {
                 cell?.buttonA.isEnabled = true
@@ -129,10 +131,12 @@ class DialogueViewController: UIViewController, UITableViewDataSource, UITableVi
         switch sender.buttonKind {
         case .openUrl?:
             //open url
-            let url = URL(string: "http://www.youtube.com")
-            UIApplication.shared.open(url!, options: [:]) { (completed) in
-                //go to url
+            if let url = URL(string: sender.url ?? "") {
+                UIApplication.shared.open(url, options: [:]) { (completed) in
+                    //go to url
+                }
             }
+
         default:
             dialogueArray = ChatMessages.getMessagePack(pack: sender.messagePack!)
             showDialogue()
@@ -151,13 +155,13 @@ class ButtonTableViewCell: UITableViewCell {
     @IBOutlet weak var backgroundImage: UIImageView!
     @IBOutlet weak var buttonA: ChoiceButton!
     @IBOutlet weak var buttonB: ChoiceButton!
-    var choiceSelected: Bool = false
 }
 
 class ChoiceButton: UIButton {
     var messagePack: Int?
     var cell: ButtonTableViewCell?
     var buttonKind: DialogueViewController.ButtonType?
+    var url: String?
 }
 
 
