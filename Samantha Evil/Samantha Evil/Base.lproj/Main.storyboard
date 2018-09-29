@@ -152,7 +152,7 @@ We need you to catch Samantha!</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Yz0-8V-U76">
-                                <rect key="frame" x="16" y="20" width="343" height="627"/>
+                                <rect key="frame" x="16" y="20" width="343" height="587"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="separatorColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
@@ -199,18 +199,24 @@ We need you to catch Samantha!</string>
                                     <outlet property="delegate" destination="TAd-aM-rbt" id="107-XK-PDW"/>
                                 </connections>
                             </tableView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="i7v-jm-cPL">
+                                <rect key="frame" x="177" y="627" width="20" height="20"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="eOK-2z-fuB" firstAttribute="trailing" secondItem="Yz0-8V-U76" secondAttribute="trailing" constant="16" id="DKf-zB-ME7"/>
+                            <constraint firstItem="i7v-jm-cPL" firstAttribute="centerX" secondItem="eOK-2z-fuB" secondAttribute="centerX" id="Rud-Si-S8W"/>
                             <constraint firstItem="Yz0-8V-U76" firstAttribute="leading" secondItem="eOK-2z-fuB" secondAttribute="leading" constant="16" id="g86-1p-23u"/>
+                            <constraint firstItem="i7v-jm-cPL" firstAttribute="top" secondItem="Yz0-8V-U76" secondAttribute="bottom" constant="20" id="j4h-lw-y7U"/>
+                            <constraint firstItem="eOK-2z-fuB" firstAttribute="bottom" secondItem="i7v-jm-cPL" secondAttribute="bottom" constant="20" id="p0U-xu-pVu"/>
                             <constraint firstItem="Yz0-8V-U76" firstAttribute="top" secondItem="eOK-2z-fuB" secondAttribute="top" id="p63-S3-uFh"/>
-                            <constraint firstItem="eOK-2z-fuB" firstAttribute="bottom" secondItem="Yz0-8V-U76" secondAttribute="bottom" constant="20" id="vKK-z9-ErD"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="eOK-2z-fuB"/>
                     </view>
                     <connections>
                         <outlet property="dialogueTableView" destination="Yz0-8V-U76" id="OkG-kk-xEy"/>
+                        <outlet property="spinner" destination="i7v-jm-cPL" id="hl9-rl-2xa"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KU6-Bm-LMu" userLabel="First Responder" sceneMemberID="firstResponder"/>

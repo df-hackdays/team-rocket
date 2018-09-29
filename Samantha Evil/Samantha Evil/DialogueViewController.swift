@@ -14,40 +14,29 @@ class DialogueViewController: UIViewController, UITableViewDataSource, UITableVi
     
     private var dialogueArray: [Dialogue] = []
     private var shownDialogueArray: [Dialogue] = []
+    @IBOutlet weak var spinner: UIActivityIndicatorView!
+    
+    enum ChatType {
+        case message, button
+    }
     
     struct Dialogue {
         var dialogue: String
-        var buttonA: UIButton?
-        var buttonB: UIButton?
+        var buttonA: Button? //receive chat message pack #
+        var buttonB: Button?
         var delay: Double //delay in seconds
-        var type: Int //0 is pure dialogue, // 1 is a dialogue that shows 2 buttons
+        var type: ChatType //0 is pure dialogue, // 1 is a dialogue that shows 2 buttons
+    }
+    
+    struct Button {
+        var buttonLabel: String
+        var buttonAction: Int
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        dialogueArray.append(Dialogue(dialogue: "Incoming Transmission....",
-                                      buttonA: nil,
-                                      buttonB: nil,
-                                      delay: 1.0,
-                                      type: 0))
-        
-        dialogueArray.append(Dialogue(dialogue: "We have a problem only you can help",
-                                      buttonA: nil,
-                                      buttonB: nil,
-                                      delay: 3.0,
-                                      type: 0))
-        
-        dialogueArray.append(Dialogue(dialogue: "Looks like our database has been hacked, all Canadians digital identify are at risk...",
-                                      buttonA: nil,
-                                      buttonB: nil,
-                                      delay: 2.0,
-                                      type: 0))
-        
-        dialogueArray.append(Dialogue(dialogue: "we need your help to stop her, would you help us?",
-                                      buttonA: nil,
-                                      buttonB: nil,
-                                      delay: 2.0,
-                                      type: 0))
+        spinner.isHidden = true
+        dialogueArray += ChatMessages.getMessagePack(pack: 0)
         showDialogue()
     }
     
