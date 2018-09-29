@@ -151,12 +151,12 @@ We need you to catch Samantha!</string>
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Yz0-8V-U76">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Yz0-8V-U76">
                                 <rect key="frame" x="16" y="20" width="343" height="587"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="separatorColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="chiefCell" rowHeight="80" id="hpl-jj-btN" customClass="ChiefTableViewCell" customModule="Samantha_Evil" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="messageCell" rowHeight="80" id="hpl-jj-btN" customClass="MessageTableViewCell" customModule="Samantha_Evil" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="343" height="80"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="hpl-jj-btN" id="xC3-Vc-bMX">
@@ -166,7 +166,7 @@ We need you to catch Samantha!</string>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="futureui1.png" translatesAutoresizingMaskIntoConstraints="NO" id="sDK-Gc-Mep">
                                                     <rect key="frame" x="0.0" y="2" width="343" height="76"/>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hrc-Fq-NHv">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="hrc-Fq-NHv">
                                                     <rect key="frame" x="22" y="20" width="309" height="49"/>
                                                     <fontDescription key="fontDescription" name="FreePixel-Regular" family="Free Pixel" pointSize="20"/>
                                                     <nil key="textColor"/>
@@ -193,6 +193,53 @@ We need you to catch Samantha!</string>
                                             <outlet property="dialogueLabel" destination="hrc-Fq-NHv" id="N7O-CC-MFZ"/>
                                         </connections>
                                     </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="buttonCell" rowHeight="157" id="5Gt-mh-zUH" customClass="ButtonTableViewCell" customModule="Samantha_Evil" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="108" width="343" height="157"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="5Gt-mh-zUH" id="7Zs-iz-ZNM">
+                                            <rect key="frame" x="0.0" y="0.0" width="343" height="157"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="futureui1.png" translatesAutoresizingMaskIntoConstraints="NO" id="3Tt-3p-Cnz">
+                                                    <rect key="frame" x="0.0" y="2" width="343" height="153"/>
+                                                </imageView>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jEE-cC-SLD" customClass="ChoiceButton" customModule="Samantha_Evil" customModuleProvider="target">
+                                                    <rect key="frame" x="23" y="87.5" width="305" height="53.5"/>
+                                                    <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <fontDescription key="fontDescription" name="FreePixel-Regular" family="Free Pixel" pointSize="17"/>
+                                                    <color key="tintColor" red="0.87049323320000005" green="0.87064296009999997" blue="0.8704838157" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <state key="normal" title="Button"/>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rph-Ab-gta" customClass="ChoiceButton" customModule="Samantha_Evil" customModuleProvider="target">
+                                                    <rect key="frame" x="23" y="26" width="305" height="53.5"/>
+                                                    <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <fontDescription key="fontDescription" name="FreePixel-Regular" family="Free Pixel" pointSize="17"/>
+                                                    <color key="tintColor" red="0.87049323320000005" green="0.87064296009999997" blue="0.8704838157" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <state key="normal" title="Button"/>
+                                                </button>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstItem="jEE-cC-SLD" firstAttribute="height" secondItem="rph-Ab-gta" secondAttribute="height" id="0Y2-Vm-2ZP"/>
+                                                <constraint firstItem="jEE-cC-SLD" firstAttribute="leading" secondItem="7Zs-iz-ZNM" secondAttribute="leading" constant="23" id="3ZJ-Wb-jBE"/>
+                                                <constraint firstItem="rph-Ab-gta" firstAttribute="leading" secondItem="7Zs-iz-ZNM" secondAttribute="leading" constant="23" id="6AL-sa-86j"/>
+                                                <constraint firstItem="jEE-cC-SLD" firstAttribute="top" secondItem="rph-Ab-gta" secondAttribute="bottom" constant="8" id="9m1-px-J2u"/>
+                                                <constraint firstAttribute="trailing" secondItem="jEE-cC-SLD" secondAttribute="trailing" constant="15" id="Kmy-yC-uhU"/>
+                                                <constraint firstItem="3Tt-3p-Cnz" firstAttribute="centerX" secondItem="7Zs-iz-ZNM" secondAttribute="centerX" id="LXv-Ba-6Fa"/>
+                                                <constraint firstAttribute="trailing" secondItem="rph-Ab-gta" secondAttribute="trailing" constant="15" id="WYj-4o-nfX"/>
+                                                <constraint firstItem="3Tt-3p-Cnz" firstAttribute="top" secondItem="7Zs-iz-ZNM" secondAttribute="top" constant="2" id="fOy-ah-67M"/>
+                                                <constraint firstAttribute="bottom" secondItem="3Tt-3p-Cnz" secondAttribute="bottom" constant="2" id="jav-od-SdP"/>
+                                                <constraint firstItem="3Tt-3p-Cnz" firstAttribute="width" secondItem="7Zs-iz-ZNM" secondAttribute="width" id="rFd-8Z-Ngz"/>
+                                                <constraint firstItem="rph-Ab-gta" firstAttribute="top" secondItem="7Zs-iz-ZNM" secondAttribute="top" constant="26" id="uil-fA-jgD"/>
+                                                <constraint firstAttribute="bottom" secondItem="jEE-cC-SLD" secondAttribute="bottom" constant="16" id="xHy-Ou-Xr5"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="backgroundImage" destination="3Tt-3p-Cnz" id="3Gc-zh-g9T"/>
+                                            <outlet property="buttonA" destination="rph-Ab-gta" id="vd9-gf-nfE"/>
+                                            <outlet property="buttonB" destination="jEE-cC-SLD" id="H4T-2t-eEE"/>
+                                        </connections>
+                                    </tableViewCell>
                                 </prototypes>
                                 <connections>
                                     <outlet property="dataSource" destination="TAd-aM-rbt" id="USR-6J-Y7Y"/>
@@ -200,7 +247,7 @@ We need you to catch Samantha!</string>
                                 </connections>
                             </tableView>
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="i7v-jm-cPL">
-                                <rect key="frame" x="177" y="627" width="20" height="20"/>
+                                <rect key="frame" x="177.5" y="627" width="20" height="20"/>
                             </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
