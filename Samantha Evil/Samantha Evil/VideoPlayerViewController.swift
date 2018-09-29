@@ -14,14 +14,7 @@ class VideoPlayerViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-//        let url = NSURL(
-//        let player = AVPlayer(URL: url)
-//        let playerController = AVPlayerViewController()
-//        playerController.player = player
-//        self.addChildViewController(playerController)
-//        self.view.addSubview(playerController.view)
-//        playerController.view.frame = self.view.frame
-//        player.play()
+
     }
 
 }

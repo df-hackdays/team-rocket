@@ -105,6 +105,7 @@ class DialogueViewController: UIViewController, UITableViewDataSource, UITableVi
             cell?.buttonA.buttonKind = dialogue.buttonA?.type
             cell?.buttonA.cell = cell
             cell?.buttonA.url = dialogue.dialogue
+            cell?.buttonA.videoNumber = dialogue.buttonA?.buttonAction
             
             cell?.buttonB.setTitle(dialogue.buttonB?.buttonLabel, for: .normal)
             cell?.buttonB.messagePack = dialogue.buttonB?.buttonAction
@@ -112,6 +113,7 @@ class DialogueViewController: UIViewController, UITableViewDataSource, UITableVi
             cell?.buttonB.buttonKind = dialogue.buttonB?.type
             cell?.buttonB.cell = cell
             cell?.buttonB.url = dialogue.dialogue
+            cell?.buttonB.videoNumber = dialogue.buttonB?.buttonAction
             
             if indexPath.row == shownDialogueArray.count - 1 {
                 cell?.buttonA.isEnabled = true
@@ -142,7 +144,15 @@ class DialogueViewController: UIViewController, UITableViewDataSource, UITableVi
     }
     
     func playVideo(videoNumber: Int) {
-        let player = AVPlayer(url: URL(fileURLWithPath: Bundle.main.path(forResource: "test", ofType:"mp4")!))
+        let player:AVPlayer
+        
+        switch videoNumber {
+        case 1:
+            player = AVPlayer(url: URL(fileURLWithPath: Bundle.main.path(forResource: "mov1", ofType:"mov")!))
+        default:
+            player = AVPlayer(url: URL(fileURLWithPath: Bundle.main.path(forResource: "mov0", ofType:"mov")!))
+        }
+        
         let vc = AVPlayerViewController()
         vc.player = player
         present(vc, animated: true) {
