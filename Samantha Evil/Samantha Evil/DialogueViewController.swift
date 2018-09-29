@@ -14,7 +14,6 @@ class DialogueViewController: UIViewController, UITableViewDataSource, UITableVi
     
     private var dialogueArray: [Dialogue] = []
     private var shownDialogueArray: [Dialogue] = []
-    @IBOutlet weak var spinner: UIActivityIndicatorView!
     
     enum ChatType {
         case message, button
@@ -40,7 +39,6 @@ class DialogueViewController: UIViewController, UITableViewDataSource, UITableVi
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        spinner.isHidden = true
         dialogueArray += ChatMessages.getMessagePack(pack: 0)
         showDialogue()
     }

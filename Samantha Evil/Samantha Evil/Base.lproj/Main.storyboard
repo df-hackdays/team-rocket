@@ -15,44 +15,6 @@
         </array>
     </customFonts>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
-            <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Samantha_Evil" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mgt-Id-wjH">
-                                <rect key="frame" x="108" y="552" width="158" height="45"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.57380741830000004" green="0.56553578380000002" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" name="FreePixel-Regular" family="Free Pixel" pointSize="19"/>
-                                <state key="normal" title="OPEN">
-                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <connections>
-                                    <segue destination="s5d-l9-WXA" kind="show" id="N2K-l0-aQ9"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="You got an encrypted messege." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5iv-Ey-VWJ">
-                                <rect key="frame" x="32" y="429" width="310" height="71"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" name="FreePixel-Regular" family="Free Pixel" pointSize="17"/>
-                                <color key="textColor" red="0.46202266219999999" green="0.83828371759999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="Fpi-Cy-fkY"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="916" y="134"/>
-        </scene>
         <!--Video Player View Controller-->
         <scene sceneID="2QU-7e-Nzh">
             <objects>
@@ -124,25 +86,6 @@ We need you to catch Samantha!</string>
             </objects>
             <point key="canvasLocation" x="2602" y="134"/>
         </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="Vfk-5n-AK2">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Gev-CR-VbU" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ntS-Vg-0mO">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <color key="barTintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="J8P-U9-ZkP"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="itp-l4-Nbq" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="136.80000000000001" y="133.5832083958021"/>
-        </scene>
         <!--Dialogue View Controller-->
         <scene sceneID="9C6-UI-Gmt">
             <objects>
@@ -152,7 +95,7 @@ We need you to catch Samantha!</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Yz0-8V-U76">
-                                <rect key="frame" x="16" y="20" width="343" height="587"/>
+                                <rect key="frame" x="16" y="20" width="343" height="627"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="separatorColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
@@ -204,14 +147,14 @@ We need you to catch Samantha!</string>
                                                     <rect key="frame" x="0.0" y="2" width="343" height="153"/>
                                                 </imageView>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jEE-cC-SLD" customClass="ChoiceButton" customModule="Samantha_Evil" customModuleProvider="target">
-                                                    <rect key="frame" x="23" y="87.5" width="305" height="53.5"/>
+                                                    <rect key="frame" x="23" y="85.5" width="305" height="51.5"/>
                                                     <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="calibratedWhite"/>
                                                     <fontDescription key="fontDescription" name="FreePixel-Regular" family="Free Pixel" pointSize="17"/>
                                                     <color key="tintColor" red="0.87049323320000005" green="0.87064296009999997" blue="0.8704838157" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <state key="normal" title="Button"/>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rph-Ab-gta" customClass="ChoiceButton" customModule="Samantha_Evil" customModuleProvider="target">
-                                                    <rect key="frame" x="23" y="26" width="305" height="53.5"/>
+                                                    <rect key="frame" x="23" y="26" width="305" height="51.5"/>
                                                     <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="calibratedWhite"/>
                                                     <fontDescription key="fontDescription" name="FreePixel-Regular" family="Free Pixel" pointSize="17"/>
                                                     <color key="tintColor" red="0.87049323320000005" green="0.87064296009999997" blue="0.8704838157" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -231,7 +174,7 @@ We need you to catch Samantha!</string>
                                                 <constraint firstAttribute="bottom" secondItem="3Tt-3p-Cnz" secondAttribute="bottom" constant="2" id="jav-od-SdP"/>
                                                 <constraint firstItem="3Tt-3p-Cnz" firstAttribute="width" secondItem="7Zs-iz-ZNM" secondAttribute="width" id="rFd-8Z-Ngz"/>
                                                 <constraint firstItem="rph-Ab-gta" firstAttribute="top" secondItem="7Zs-iz-ZNM" secondAttribute="top" constant="26" id="uil-fA-jgD"/>
-                                                <constraint firstAttribute="bottom" secondItem="jEE-cC-SLD" secondAttribute="bottom" constant="16" id="xHy-Ou-Xr5"/>
+                                                <constraint firstAttribute="bottom" secondItem="jEE-cC-SLD" secondAttribute="bottom" constant="20" id="xHy-Ou-Xr5"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
@@ -246,24 +189,18 @@ We need you to catch Samantha!</string>
                                     <outlet property="delegate" destination="TAd-aM-rbt" id="107-XK-PDW"/>
                                 </connections>
                             </tableView>
-                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="i7v-jm-cPL">
-                                <rect key="frame" x="177.5" y="627" width="20" height="20"/>
-                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="eOK-2z-fuB" firstAttribute="trailing" secondItem="Yz0-8V-U76" secondAttribute="trailing" constant="16" id="DKf-zB-ME7"/>
-                            <constraint firstItem="i7v-jm-cPL" firstAttribute="centerX" secondItem="eOK-2z-fuB" secondAttribute="centerX" id="Rud-Si-S8W"/>
+                            <constraint firstItem="eOK-2z-fuB" firstAttribute="bottom" secondItem="Yz0-8V-U76" secondAttribute="bottom" constant="20" id="byo-Jm-gLL"/>
                             <constraint firstItem="Yz0-8V-U76" firstAttribute="leading" secondItem="eOK-2z-fuB" secondAttribute="leading" constant="16" id="g86-1p-23u"/>
-                            <constraint firstItem="i7v-jm-cPL" firstAttribute="top" secondItem="Yz0-8V-U76" secondAttribute="bottom" constant="20" id="j4h-lw-y7U"/>
-                            <constraint firstItem="eOK-2z-fuB" firstAttribute="bottom" secondItem="i7v-jm-cPL" secondAttribute="bottom" constant="20" id="p0U-xu-pVu"/>
                             <constraint firstItem="Yz0-8V-U76" firstAttribute="top" secondItem="eOK-2z-fuB" secondAttribute="top" id="p63-S3-uFh"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="eOK-2z-fuB"/>
                     </view>
                     <connections>
                         <outlet property="dialogueTableView" destination="Yz0-8V-U76" id="OkG-kk-xEy"/>
-                        <outlet property="spinner" destination="i7v-jm-cPL" id="hl9-rl-2xa"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KU6-Bm-LMu" userLabel="First Responder" sceneMemberID="firstResponder"/>
