@@ -14,6 +14,9 @@
 		67E79E53215F0D72005A36F2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 67E79E51215F0D72005A36F2 /* LaunchScreen.storyboard */; };
 		67E79E5B215F0EBF005A36F2 /* VideoPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67E79E5A215F0EBF005A36F2 /* VideoPlayerViewController.swift */; };
 		67E79E5D215F121E005A36F2 /* MissionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67E79E5C215F121E005A36F2 /* MissionViewController.swift */; };
+		7553CDBB215F192A002DEF1A /* FreePixel.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7553CDBA215F1929002DEF1A /* FreePixel.ttf */; };
+		7553CDBD215F220E002DEF1A /* DialogueViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7553CDBC215F220E002DEF1A /* DialogueViewController.swift */; };
+		7553CDC0215F2575002DEF1A /* futureui1.png in Resources */ = {isa = PBXBuildFile; fileRef = 7553CDBF215F2575002DEF1A /* futureui1.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +29,9 @@
 		67E79E54215F0D72005A36F2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		67E79E5A215F0EBF005A36F2 /* VideoPlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPlayerViewController.swift; sourceTree = "<group>"; };
 		67E79E5C215F121E005A36F2 /* MissionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissionViewController.swift; sourceTree = "<group>"; };
+		7553CDBA215F1929002DEF1A /* FreePixel.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = FreePixel.ttf; sourceTree = "<group>"; };
+		7553CDBC215F220E002DEF1A /* DialogueViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DialogueViewController.swift; sourceTree = "<group>"; };
+		7553CDBF215F2575002DEF1A /* futureui1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = futureui1.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,16 +64,27 @@
 		67E79E47215F0D69005A36F2 /* Samantha Evil */ = {
 			isa = PBXGroup;
 			children = (
+				7553CDBE215F256B002DEF1A /* Images */,
 				67E79E48215F0D69005A36F2 /* AppDelegate.swift */,
 				67E79E4A215F0D69005A36F2 /* ViewController.swift */,
 				67E79E4C215F0D6A005A36F2 /* Main.storyboard */,
+				7553CDBC215F220E002DEF1A /* DialogueViewController.swift */,
 				67E79E5C215F121E005A36F2 /* MissionViewController.swift */,
 				67E79E5A215F0EBF005A36F2 /* VideoPlayerViewController.swift */,
 				67E79E4F215F0D72005A36F2 /* Assets.xcassets */,
 				67E79E51215F0D72005A36F2 /* LaunchScreen.storyboard */,
 				67E79E54215F0D72005A36F2 /* Info.plist */,
+				7553CDBA215F1929002DEF1A /* FreePixel.ttf */,
 			);
 			path = "Samantha Evil";
+			sourceTree = "<group>";
+		};
+		7553CDBE215F256B002DEF1A /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				7553CDBF215F2575002DEF1A /* futureui1.png */,
+			);
+			path = Images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -129,6 +146,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				67E79E53215F0D72005A36F2 /* LaunchScreen.storyboard in Resources */,
+				7553CDBB215F192A002DEF1A /* FreePixel.ttf in Resources */,
+				7553CDC0215F2575002DEF1A /* futureui1.png in Resources */,
 				67E79E50215F0D72005A36F2 /* Assets.xcassets in Resources */,
 				67E79E4E215F0D6A005A36F2 /* Main.storyboard in Resources */,
 			);
@@ -144,6 +163,7 @@
 				67E79E5B215F0EBF005A36F2 /* VideoPlayerViewController.swift in Sources */,
 				67E79E4B215F0D69005A36F2 /* ViewController.swift in Sources */,
 				67E79E49215F0D69005A36F2 /* AppDelegate.swift in Sources */,
+				7553CDBD215F220E002DEF1A /* DialogueViewController.swift in Sources */,
 				67E79E5D215F121E005A36F2 /* MissionViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -289,7 +309,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = ZXBP2NY6Q9;
+				DEVELOPMENT_TEAM = K2W39SQ9G2;
 				INFOPLIST_FILE = "Samantha Evil/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -307,7 +327,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = ZXBP2NY6Q9;
+				DEVELOPMENT_TEAM = K2W39SQ9G2;
 				INFOPLIST_FILE = "Samantha Evil/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
